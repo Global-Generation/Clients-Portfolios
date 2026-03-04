@@ -75,8 +75,10 @@ export default function PortfolioSection({ lang }: { lang: Lang }) {
                 }`}
                 onClick={() => openLightbox(i)}
               >
-                <div
-                  className={`photo-placeholder w-full ${
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className={`w-full object-cover ${
                     item.span === 2 ? "aspect-[21/9]" : "aspect-[4/5]"
                   } transition-transform duration-500 group-hover:scale-[1.02]`}
                 />

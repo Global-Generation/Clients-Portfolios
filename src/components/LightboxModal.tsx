@@ -80,20 +80,17 @@ export default function LightboxModal({
           </svg>
         </button>
 
-        {/* Photo placeholder */}
-        <motion.div
+        {/* Photo */}
+        <motion.img
           key={currentIndex}
+          src={item.image}
+          alt={item.title}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
-          className="photo-placeholder w-[80vw] h-[70vh] max-w-4xl flex items-center justify-center"
+          className="max-w-[80vw] max-h-[80vh] object-contain"
           onClick={(e) => e.stopPropagation()}
-        >
-          <div className="text-center">
-            <p className="text-[#999] text-sm">{item.title}</p>
-            <p className="text-[#ccc] text-xs mt-1">Photo {item.id}</p>
-          </div>
-        </motion.div>
+        />
 
         {/* Counter */}
         <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-[11px] text-[#999] tracking-[0.1em]">

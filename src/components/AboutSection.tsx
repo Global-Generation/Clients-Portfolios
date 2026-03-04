@@ -26,7 +26,11 @@ export default function AboutSection({ lang }: { lang: Lang }) {
 
           {/* Photo placeholder — 3 columns */}
           <ScrollReveal className="md:col-span-3" delay={0.2}>
-            <div className="photo-placeholder aspect-[3/4] md:aspect-[4/5] w-full" />
+            <img
+              src="/images/about.jpg"
+              alt="Artemiy Ivanov portrait"
+              className="aspect-[3/4] md:aspect-[4/5] w-full object-cover"
+            />
           </ScrollReveal>
         </div>
       </div>

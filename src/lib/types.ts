@@ -10,6 +10,7 @@ export interface PortfolioItem {
   id: number;
   category: "modeling" | "theater";
   title: string;
+  image: string;
   span: 1 | 2; // grid column span
 }
 

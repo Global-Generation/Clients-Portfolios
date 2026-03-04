@@ -202,12 +202,13 @@ export const content: Record<"en" | "ru", Content> = {
 };
 
 export const portfolioItems: PortfolioItem[] = [
-  { id: 1, category: "modeling", title: "Editorial I", span: 2 },
-  { id: 2, category: "modeling", title: "Studio Session", span: 1 },
-  { id: 3, category: "theater", title: "Operetta Stage", span: 1 },
-  { id: 4, category: "modeling", title: "Fashion Week", span: 1 },
-  { id: 5, category: "theater", title: "Heart Given to Children", span: 1 },
-  { id: 6, category: "modeling", title: "Editorial II", span: 2 },
-  { id: 7, category: "modeling", title: "Commercial", span: 1 },
-  { id: 8, category: "theater", title: "The Magic Flute", span: 1 },
+  { id: 1, category: "modeling", title: "Leather Editorial", image: "/images/portfolio/01-leather-editorial.jpg", span: 2 },
+  { id: 2, category: "modeling", title: "Moscow Rooftop", image: "/images/portfolio/02-moscow-skyline.jpg", span: 1 },
+  { id: 3, category: "modeling", title: "Red Turtleneck", image: "/images/portfolio/03-red-turtleneck.jpg", span: 1 },
+  { id: 4, category: "modeling", title: "Olive Sweater", image: "/images/portfolio/04-olive-sweater.jpg", span: 1 },
+  { id: 5, category: "modeling", title: "Studio Portrait", image: "/images/portfolio/05-studio-moody.jpg", span: 1 },
+  { id: 6, category: "modeling", title: "B&W Walking", image: "/images/portfolio/06-bw-walking.jpg", span: 2 },
+  { id: 7, category: "modeling", title: "White Turtleneck", image: "/images/portfolio/07-bw-turtleneck.jpg", span: 1 },
+  { id: 8, category: "modeling", title: "Sunset Coat", image: "/images/portfolio/08-sunset-coat.jpg", span: 1 },
+  { id: 9, category: "theater", title: "Through the Glass", image: "/images/portfolio/09-theater-glass.jpg", span: 1 },
 ];

@@ -9,8 +9,11 @@ export default function HeroSection({ lang }: { lang: Lang }) {
 
   return (
     <section className="relative w-full h-[90vh] overflow-hidden">
-      {/* Placeholder gradient — replace with actual hero photo */}
-      <div className="absolute inset-0 photo-placeholder" />
+      <img
+        src="/images/hero.jpg"
+        alt="Artemiy Ivanov"
+        className="absolute inset-0 w-full h-full object-cover object-top"
+      />
 
       {/* Overlay for text readability */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
