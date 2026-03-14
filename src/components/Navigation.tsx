@@ -22,8 +22,11 @@ export default function Navigation({
 
   const links = [
     { href: "#about", label: t.about },
-    { href: "#experience", label: t.experience },
+    { href: "#career", label: t.career },
+    { href: "#theater", label: t.theater },
+    { href: "#leadership", label: t.leadership },
     { href: "#portfolio", label: t.portfolio },
+    { href: "#education", label: t.education },
     { href: "#words", label: t.words },
     { href: "#contact", label: t.contact },
   ];
@@ -39,17 +42,21 @@ export default function Navigation({
       <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between h-14">
         <a
           href="#"
-          className="font-[family-name:var(--font-playfair)] text-lg tracking-tight"
+          className={`font-[family-name:var(--font-playfair)] text-lg tracking-tight transition-colors duration-500 ${
+            scrolled ? "text-[#111]" : "text-white"
+          }`}
         >
           A.I.
         </a>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-[11px] font-medium tracking-[0.15em] uppercase text-[#999] hover:text-[#ff3d00] transition-colors"
+              className={`text-[10px] font-medium tracking-[0.12em] uppercase hover:text-[#ff3d00] transition-colors duration-500 ${
+                scrolled ? "text-[#999]" : "text-white/90"
+              }`}
             >
               {link.label}
             </a>
@@ -58,7 +65,9 @@ export default function Navigation({
 
         <button
           onClick={onToggleLang}
-          className="text-[11px] font-medium tracking-[0.15em] uppercase text-[#999] hover:text-[#ff3d00] transition-colors border border-[#e8e8e8] rounded-full px-3 py-1"
+          className={`text-[11px] font-medium tracking-[0.15em] uppercase hover:text-[#ff3d00] transition-colors duration-500 rounded-full px-3 py-1 ${
+            scrolled ? "text-[#999] border border-[#e8e8e8]" : "text-white/90 border border-white/40"
+          }`}
         >
           {lang === "en" ? "RU" : "EN"}
         </button>

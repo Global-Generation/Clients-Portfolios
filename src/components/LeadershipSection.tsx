@@ -4,11 +4,11 @@ import { Lang } from "@/lib/types";
 import { content } from "@/lib/content";
 import ScrollReveal from "./ScrollReveal";
 
-export default function EducationSection({ lang }: { lang: Lang }) {
-  const t = content[lang].education;
+export default function LeadershipSection({ lang }: { lang: Lang }) {
+  const t = content[lang].leadership;
 
   return (
-    <section id="education" className="py-24 md:py-32 px-6 md:px-10">
+    <section id="leadership" className="py-24 md:py-32 px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
           <p className="section-label mb-12">{t.label}</p>

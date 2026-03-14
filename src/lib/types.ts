@@ -4,6 +4,26 @@ export interface ExperienceItem {
   years: string;
   title: string;
   description: string;
+  bullets?: string[];
+}
+
+export interface EducationItem {
+  years: string;
+  title: string;
+  location: string;
+  bullets: string[];
+}
+
+export interface LeadershipItem {
+  years: string;
+  title: string;
+  location: string;
+  bullets: string[];
+}
+
+export interface SkillCategory {
+  label: string;
+  items: string[];
 }
 
 export interface PortfolioItem {
@@ -23,8 +43,11 @@ export interface QuoteItem {
 export interface Content {
   nav: {
     about: string;
-    experience: string;
+    career: string;
+    theater: string;
+    leadership: string;
     portfolio: string;
+    education: string;
     words: string;
     contact: string;
   };
@@ -35,9 +58,17 @@ export interface Content {
     label: string;
     paragraphs: string[];
   };
-  experience: {
+  career: {
     label: string;
     items: ExperienceItem[];
+  };
+  theater: {
+    label: string;
+    items: ExperienceItem[];
+  };
+  leadership: {
+    label: string;
+    items: LeadershipItem[];
   };
   portfolio: {
     label: string;
@@ -45,7 +76,15 @@ export interface Content {
   };
   education: {
     label: string;
-    text: string;
+    items: EducationItem[];
+  };
+  sport: {
+    label: string;
+    items: ExperienceItem[];
+  };
+  skills: {
+    label: string;
+    categories: SkillCategory[];
   };
   words: {
     label: string;
@@ -54,6 +93,8 @@ export interface Content {
   contact: {
     label: string;
     location: string;
+    email: string;
+    phone: string;
     cta: string;
   };
 }

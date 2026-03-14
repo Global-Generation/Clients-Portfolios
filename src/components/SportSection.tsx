@@ -4,14 +4,14 @@ import { Lang } from "@/lib/types";
 import { content } from "@/lib/content";
 import ScrollReveal from "./ScrollReveal";
 
-export default function EducationSection({ lang }: { lang: Lang }) {
-  const t = content[lang].education;
+export default function SportSection({ lang }: { lang: Lang }) {
+  const t = content[lang].sport;
 
   return (
-    <section id="education" className="py-24 md:py-32 px-6 md:px-10">
+    <section id="sport" className="py-16 md:py-20 px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         <ScrollReveal>
-          <p className="section-label mb-12">{t.label}</p>
+          <p className="section-label mb-10">{t.label}</p>
         </ScrollReveal>
 
         <div className="space-y-0">
@@ -26,9 +26,9 @@ export default function EducationSection({ lang }: { lang: Lang }) {
                     {item.title}
                   </h3>
                   <p className="text-[13px] text-[#666] leading-relaxed">
-                    {item.location}
+                    {item.description}
                   </p>
-                  {item.bullets.length > 0 && (
+                  {item.bullets && item.bullets.length > 0 && (
                     <ul className="mt-2 space-y-1">
                       {item.bullets.map((bullet, j) => (
                         <li

@@ -23,10 +23,16 @@ export default function ContactSection({ lang }: { lang: Lang }) {
 
             <div className="flex flex-col items-start md:items-end gap-3">
               <a
-                href="mailto:artemiy@globalgeneration.ru"
+                href={`mailto:${t.email}`}
                 className="text-[14px] text-[#111] hover:text-[#ff3d00] transition-colors underline underline-offset-4 decoration-[#e8e8e8] hover:decoration-[#ff3d00]"
               >
-                artemiy@globalgeneration.ru
+                {t.email}
+              </a>
+              <a
+                href={`tel:${t.phone.replace(/\s/g, "")}`}
+                className="text-[14px] text-[#111] hover:text-[#ff3d00] transition-colors underline underline-offset-4 decoration-[#e8e8e8] hover:decoration-[#ff3d00]"
+              >
+                {t.phone}
               </a>
               <a
                 href="https://instagram.com/artemiy.ivanov"
